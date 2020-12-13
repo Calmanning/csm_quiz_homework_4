@@ -40,8 +40,8 @@ header {
 #quiz{
 }
 
-button {
-    background-color: darkslateblue;
+.button {
+    background-color: #483d8b;
     color:  #f8efd3;
     font-size: 18px;
     line-height: 22px;
@@ -54,8 +54,19 @@ button {
     transition-timing-function: linear;
     padding: 10px;
     margin: 4px 0 10px 0;
-
+    outline: none;
+    outline-color: black;
 }
+
+.button:hover {
+    background-color:#2b2555;
+}
+
+
+
+
+
+
 main {
     width: 60%;
     margin: auto;
