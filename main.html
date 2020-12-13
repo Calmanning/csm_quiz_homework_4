@@ -1,0 +1,58 @@
+<!-- 
+
+TODO: Create a (code) quiz.
+
+TODO: Create a "start quiz" button.
+
+TODO: Creater a header with clickable links to "Retake Test" & "View Highscores."
+
+TODO: Create a timer that starts once the "start quiz" button is "clicked"
+        TODO: See if you can center the timer 
+
+
+TODO: A function that, once the correct answer is "clicked" will clear out the old question set and create a new one.
+        
+TODO: ensure that whenever the incorrect answer is selected time is subtracted from the timer.
+        TODO: An on page notification that the correct answer was selected
+TODO: Make sure that when all the questions are answered or when the timer reaches"0" the game is offically over.
+
+TODO: Save the users score and intials on the score page. Make sure that (fabricated) example scores populate in the fields if the user has not played before. 
+        TODO: The user score is their remaining time value.
+
+
+LOOK AT: The todo list example, the timer/poem example, the gif active/inactive switch (or w3schools visability) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzaro World.</title>
+    <link rel="stylesheet" href="style.css"></style>
+</head>
+<body>
+    <nav> 
+        <ul>
+            <li>Retake Test?</li>
+            <li>View Highscores</li>
+        </ul>
+    </nav>
+    
+    <main class="container" id="quiz">
+        <header><h1>Let's Take a Quiz!</h1>
+            <button id="start">Start the quiz</button>
+        </header>
+        <h2 id="prompt"> </h2>
+        <ul id="answers">
+            
+        </ul>
+        <p id="response">
+
+        </p>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
