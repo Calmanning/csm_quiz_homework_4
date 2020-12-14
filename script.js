@@ -15,6 +15,34 @@ var answerTwo = ["1","2no","3sure","definitely maybe?"]
 var question3 = "something" 
 var answerThree = ["yes","no","sure","maybe?"]
 
+var questions = [
+    { question: 'Does this even work?',
+      answers: [
+            {text: "I don't know.", correct: false},
+            {text: "maybe it does", correct: true},
+            {text: "I sure hope so", correct: false}
+          ]    
+    },
+    {
+        question: "What is an array?",
+        answers: [
+            {text: "I don't know anymore", correct: false},
+            {text: "An array is a special variable that can hold more than one value", corrrect: true},
+            {text: "I don't know... try the answer above me", correct: false},
+        
+        ]
+    },
+    {
+        question: "We're doing three questions right now.",
+        answers: [
+            {text: "That's not a question", correct: false},
+            {text: "three sounds great", corrrect: false},
+            {text: "This is also an answer!", correct: true},
+        
+        ]
+    }
+]
+
 function buttonClicked () {
     introTextEl.textContent = ""
     buttonEl.style.display = "none"
@@ -96,9 +124,79 @@ buttonEl.addEventListener("click", function(event) {
     
 })
 
-ulEl.addEventListener("click", function(event) { 
+li.addEventListener("click", function(event) { 
     event.preventDefault
     console.log("uhhh, 'click'");
     questionTwo();
 
 })
+
+
+// What follows is some code from 'coding demystified", this is the link to their code (https://github.com/WebDevSimplified/JavaScript-Quiz-App) 
+//not sure if this will help but it's something to look at and dismantle for my own work.
+
+// const startButton = document.getElementById('start-btn')
+// const nextButton = document.getElementById('next-btn')
+// const questionContainerElement = document.getElementById('question-container')
+// const questionElement = document.getElementById('question')
+// const answerButtonsElement = document.getElementById('answer-buttons')
+// const startButton = document.getElementById('start-btn')
+// const nextButton = document.getElementById('next-btn')
+
+// let shuffledQuestions, currentQuestionIndex
+
+// @@ -17,22 +17,14 @@ function startGame() {
+//   shuffledQuestions = questions.sort(() => Math.random() - .5)
+//   currentQuestionIndex = 0
+//   questionContainerElement.classList.remove('hide')
+//   setNextQuestion(shuffledQuestions, currentQuestionIndex)
+//   setNextQuestion()
+// }
+
+// function setNextQuestion() {
+//   resetState()
+//   showQuestion(shuffledQuestions[currentQuestionIndex])
+// }
+
+// function resetState() {
+//   clearStatusClass(document.body)
+//   nextButton.classList.add('hide')
+//   while (answerButtonsElement.firstChild) {
+//     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+//   }
+// }
+
+// function showQuestion(question) {
+//   questionElement.innerText = question.question
+//   question.answers.forEach(answer => {
+// @@ -47,12 +39,20 @@ function showQuestion(question) {
+//   })
+// }
+
+// function resetState() {
+//   clearStatusClass(document.body)
+//   nextButton.classList.add('hide')
+//   while (answerButtonsElement.firstChild) {
+//     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+//   }
+// }
+
+// function selectAnswer(e) {
+//   const selectedButton = e.target
+//   const correct = selectedButton.dataset.correct
+//   setStatusClass(document.body, correct)
+//   Array.from(answerButtonsElement.children).forEach(child => {
+//     setStatusClass(child, child.dataset.correct)
+//   Array.from(answerButtonsElement.children).forEach(button => {
+//     setStatusClass(button, button.dataset.correct)
+//   })
+//   if (shuffledQuestions.length > currentQuestionIndex + 1) {
+//     nextButton.classList.remove('hide')
+// @@ -72,11 +72,18 @@ function setStatusClass(element, correct) {
+// }
+
+// function clearStatusClass(element) {
+//   element.classList.remove('wrong')
+//   element.classList.remove('correct')
+//   element.classList.remove('wrong')
+// }
