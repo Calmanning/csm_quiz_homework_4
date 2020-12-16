@@ -40,7 +40,7 @@ header {
 #quiz{
 }
 
-.button {
+#start-button {
     background-color: #483d8b;
     color:  #f8efd3;
     font-size: 18px;
@@ -62,7 +62,9 @@ header {
     background-color:#2b2555;
 }
 
-
+.hide {
+    display: none;
+}
 
 
 
